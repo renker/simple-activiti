@@ -46,15 +46,15 @@ public class LeaveTest {
 			repositoryService.deleteDeployment(processDefinition.getDeploymentId());
 		}
 		
-		// ²¿ÊğÁ÷³Ì¶¨ÒåÎÄ¼ş
+		// éƒ¨ç½²æµç¨‹å®šä¹‰æ–‡ä»¶
 		repositoryService.createDeployment().addClasspathResource("com/renker/activiti/hellow/leave.bpmn").deploy();
 		
-		// »ñÈ¡Á÷³Ì¶¨Òå
+		// è·å–æµç¨‹å®šä¹‰
 		ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().singleResult();
 		
 		System.out.println(processDefinition.getKey());
 		
-		// Æô¶¯Á÷³Ì²¢·µ»ØÁ÷³ÌÊµÀı
+		// å¯åŠ¨æµç¨‹å¹¶è¿”å›æµç¨‹å®ä¾‹
 		ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("leave");
 				
 		System.out.println(processInstance.getId()+" "+processInstance.getProcessDefinitionId());
@@ -68,7 +68,7 @@ public class LeaveTest {
 			repositoryService.deleteDeployment(processDefinition.getDeploymentId());
 		}
 		
-		// ²¿ÊğÁ÷³Ì¶¨ÒåÎÄ¼ş
+		// éƒ¨ç½²æµç¨‹å®šä¹‰æ–‡ä»¶
 		repositoryService.createDeployment().addClasspathResource("com/renker/activiti/hellow/SayHellowToLeave.bpmn").deploy();
 		
 		ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().singleResult();
@@ -83,7 +83,7 @@ public class LeaveTest {
 		
 		Task taskOfDeptLeader = taskService.createTaskQuery().taskCandidateGroup("deptLeader").singleResult();
 		
-		System.out.println("Áìµ¼ÉóÅú   \t"+taskOfDeptLeader.getName());
+		System.out.println("é¢†å¯¼å®¡æ‰¹   \t"+taskOfDeptLeader.getName());
 		
 		taskService.claim(taskOfDeptLeader.getId(), "leaderUser");
 		
@@ -95,6 +95,6 @@ public class LeaveTest {
 		
 		long count =  historyService.createHistoricProcessInstanceQuery().finished().count();
 		
-		System.out.println("Íê³ÉÊıÁ¿  "+count);
+		System.out.println("å®Œæˆæ•°é‡  "+count);
 	}
 }
