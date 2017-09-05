@@ -7,4 +7,236 @@
   </parent>
   <artifactId>simple-activiti-hellow</artifactId>
   <packaging>war</packaging>
+  
+  <dependencies>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+	</dependency>
+	
+	<!-- common  -->
+	
+	<dependency>
+      	<groupId>org.apache.openejb</groupId>
+      	<artifactId>javaee-api</artifactId>
+      	<scope>provided</scope>
+    </dependency>
+    <dependency>
+      	<groupId>javax.servlet</groupId>
+      	<artifactId>jstl</artifactId>
+      	<scope>runtime</scope>
+    </dependency>
+    <dependency>
+      	<groupId>javax.servlet.jsp</groupId>
+      	<artifactId>jsp-api</artifactId>
+      	<scope>provided</scope>
+    </dependency>
+
+	<dependency>  
+         <groupId>commons-dbcp</groupId>  
+         <artifactId>commons-dbcp</artifactId>  
+     </dependency>  
+
+     <dependency>  
+         <groupId>commons-pool</groupId>  
+         <artifactId>commons-pool</artifactId>  
+     </dependency>
+     
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.transaction</groupId>
+		<artifactId>jta</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+	
+	<!-- log -->
+    <dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+	</dependency>
+	
+	<dependency> 
+	    <groupId>ch.qos.logback</groupId> 
+	    <artifactId>logback-core</artifactId> 
+	</dependency> 
+	
+	<dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-classic</artifactId>
+	</dependency>
+	
+	<!-- spring -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+	</dependency>
+
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-core</artifactId>  
+	</dependency>
+    
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-expression</artifactId>  
+	</dependency>
+    
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-beans</artifactId>  
+	</dependency> 
+
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-context</artifactId>  
+	</dependency> 
+
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-context-support</artifactId>  
+	</dependency> 
+
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-tx</artifactId>  
+	</dependency> 
+
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-jdbc</artifactId>  
+	</dependency>
+       
+	<dependency>  
+		<groupId>org.springframework</groupId>  
+		<artifactId>spring-webmvc</artifactId>  
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	</dependency>
+	
+	<dependency>  
+        <groupId>com.fasterxml.jackson.core</groupId>  
+        <artifactId>jackson-core</artifactId>  
+    </dependency>  
+    <dependency>  
+        <groupId>com.fasterxml.jackson.core</groupId>  
+        <artifactId>jackson-databind</artifactId>  
+    </dependency>  
+    
+	<!-- shiro -->
+    
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-core</artifactId>
+	</dependency>
+    
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-web</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-ehcache</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-spring</artifactId>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.shiro.tools</groupId>
+		<artifactId>shiro-tools-hasher</artifactId>
+	</dependency>
+	
+	<!-- 扩展shiro对redis支持的第三方jar -->
+	<dependency>
+	    <groupId>org.crazycake</groupId>
+	    <artifactId>shiro-redis</artifactId>
+	</dependency>
+
+	<!-- mybatis -->
+	<dependency>  
+		<groupId>org.mybatis</groupId>  
+		<artifactId>mybatis-spring</artifactId>  
+    	</dependency>  
+
+	<dependency>  
+		<groupId>org.mybatis</groupId>  
+		<artifactId>mybatis</artifactId>  
+	</dependency>
+	
+	<!-- email -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.sitemesh</groupId>
+	    <artifactId>sitemesh</artifactId>
+	</dependency>
+	
+	<!-- redis -->
+	
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-redis</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	</dependency>
+	
+	
+	<dependency>
+	    <groupId>javax.websocket</groupId>
+	    <artifactId>javax.websocket-api</artifactId>
+	</dependency>
+	
+	<!-- quartz 2.2.3 -->
+	<dependency>
+		<groupId>org.quartz-scheduler</groupId>
+		<artifactId>quartz</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.quartz-scheduler</groupId>
+		<artifactId>quartz-jobs</artifactId>
+	</dependency>
+
+	<!-- activiti -->
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-engine</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.activiti</groupId>
+	    <artifactId>activiti-spring</artifactId>
+	</dependency>
+	
+	<dependency>  
+		<groupId>org.codehaus.groovy</groupId>  
+		<artifactId>groovy-all</artifactId>  
+	</dependency>
+  
+  </dependencies>
 </project>
