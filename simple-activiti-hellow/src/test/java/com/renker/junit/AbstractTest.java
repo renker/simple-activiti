@@ -2,6 +2,7 @@ package com.renker.junit;
 
 import javax.annotation.Resource;
 
+import org.activiti.engine.FormService;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.RepositoryService;
@@ -32,4 +33,7 @@ public class AbstractTest {
 	
 	@Resource
 	protected ProcessEngineFactoryBean processEngineFactoryBean;
+	
+	@Resource
+	protected FormService formService;
 }

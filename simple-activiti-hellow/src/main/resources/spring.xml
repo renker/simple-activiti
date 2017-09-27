@@ -34,6 +34,7 @@
 	    <property name="jobExecutorActivate" value="false" />
 	    <property name="asyncExecutorEnabled" value="true" />
 	    <property name="asyncExecutorActivate" value="false" />
+	    <property name="activityFontName" value="宋体" />
 	
 	</bean>
 	
@@ -51,5 +52,7 @@
 	<bean id="historyService" factory-bean="processEngine" factory-method="getHistoryService" />
 	
 	<bean id="identityService" factory-bean="processEngine" factory-method="getIdentityService"></bean>
+	
+	<bean id="formService" factory-bean="processEngine" factory-method="getFormService"></bean>
 	
 </beans>
